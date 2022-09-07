@@ -32,27 +32,30 @@
     createTime：时间（暂时不知道怎么恢复成年月日），但是降序排序以后的顺序是聊天记录由近到远的顺序
     自己加了一列newTime，记录聊天记录所在月份，是根据createTime降序排序后，手机上看每月最后几句信息，在excel中搜索，来进行月份划分的
     
-    ![img.png](img.png)   
+![image](result/数据示例.png)   
     
     
 ### 2. 生成词云
     调用generate_word_cloud.py
+![image](result/词云-他发的.png)   
+![image](result/词云-我发的.png)   
 
 ### 3. 计算情感得分均值，作折线图（使用snownlp）
     ① 调用get_sentiment_score()函数，将情感得分保存到csv的sentiment_score列中
     ② 调用draw()函数，将情感得分随时间变化值保存到result文件夹中
     
     snownlp得到的分值不一定准确，所以send和receive的得分值都差不多，但也有可能日常的交流就是比较中性的，没有什么大起大落的情感
-    ![img_1.png](img_1.png)
+![image](result/情感得分随时间变化.png)   
 
 
 ### 4. 计算情绪分类，作热力图（使用大连理工情感词典）
     调用sentiment_dict.py
     注意第115行，如果没有匹配到任何情感词，就记为None，绘制热力图的时候会筛掉None的记录
-    ![img_2.png](img_2.png)
+![image](result/情感热力图.png)   
 
 ### 5. 其他统计绘图
     others.py
+![image](result/句子长度均值随时间变化.png)   
 
 
     
