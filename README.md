@@ -16,7 +16,7 @@
 
     --sentiment_dict.py         使用大连理工情感词典计算情绪分类，作热力图
     
-    --others.py
+    --others.py                 其他统计
  
 
 ## 具体步骤
